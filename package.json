@@ -1,0 +1,19 @@
+{
+   "name": "bot-boiler",
+   "module": "bootstrap.ts",
+   "type": "module",
+   "scripts": {
+      "dev": "bun --watch bootstrap.ts"
+   },
+   "devDependencies": {
+      "@types/bun": "latest",
+      "@types/node": "^20.14.2"
+   },
+   "peerDependencies": {
+      "typescript": "^5.0.0"
+   },
+   "dependencies": {
+      "discord.js": "^14.15.3",
+      "redis": "^4.6.14"
+   }
+}
