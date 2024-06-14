@@ -1,13 +1,13 @@
-import { readdirSync, statSync } from 'fs';
-import { join } from 'path';
-import { REST } from '@discordjs/rest';
-import { Routes } from 'discord-api-types/v10';
-import { CommandStorage } from '@/storage/commands';
-import { getExtension } from '../helpers';
-import { config } from '@/config';
-import { Logger } from '../logger';
+import { readdirSync, statSync } from "fs";
+import { join } from "path";
+import { REST } from "@discordjs/rest";
+import { Routes } from "discord-api-types/v10";
+import { CommandStorage } from "@/storage/commands";
+import { getExtension } from "../helpers";
+import { config } from "@/config";
+import { Logger } from "../logger";
 
-let DISCORD_REST = new REST({ version: '10' }).setToken(config.DISCORD_TOKEN);
+let DISCORD_REST = new REST({ version: "10" }).setToken(config.DISCORD_TOKEN);
 
 export class CommandHandler {
    private commands = new CommandStorage();
@@ -15,7 +15,7 @@ export class CommandHandler {
    private logger = new Logger();
 
    constructor() {
-      this.loadCommandFiles(join(__dirname, '../../commands'));
+      this.loadCommandFiles(join(__dirname, "../../commands"));
    }
 
    private loadCommandFiles(dir: string) {
@@ -36,7 +36,7 @@ export class CommandHandler {
          let commands = await this.commands.getAllCommandsForRest();
 
          await DISCORD_REST.put(
-            Routes.applicationGuildCommands(process.env.DISCORD_APP_ID!, process.env.GUILD_TOKEN!),
+            Routes.applicationGuildCommands(config.DISCORD_APP_ID, config.GUILD_TOKEN),
             { body: commands },
          );
 
