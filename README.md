@@ -1,4 +1,18 @@
-# server-bot
+# bot-boiler
+
+This is a boilerplate for a [discordjs](https://discord.js.org/) bot, using [bun](https://bun.sh/) and [typescript](https://www.typescriptlang.org/).
+
+- [x] TypeScript
+- [x] Bun
+- [x] Discord.js v13
+- [x] Docker
+- [x] Slash Command Handler
+- [x] Event Handler
+- [x] Multi Storage Options
+- [x] Drizzle ORM
+- And so much more to come!
+
+## Getting Started
 
 To install dependencies:
 
@@ -9,7 +23,10 @@ bun install
 To run:
 
 ```bash
-bun run bootstrap.ts
+bun run dev
 ```
 
-This project was created using `bun init` in bun v1.1.13. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+OR -
+```bash
+bun run bootstrap.ts
+```
