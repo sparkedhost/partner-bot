@@ -9,8 +9,8 @@ This is a boilerplate for a [discordjs](https://discord.js.org/) bot, using [bun
 - [x] Slash Command Handler
 - [x] Event Handler
 - [x] Multi Storage Options
-- [x] Drizzle ORM
-- And so much more to come!
+- [x] Prisma ORM
+- And much more to come!
 
 ## Getting Started
 
